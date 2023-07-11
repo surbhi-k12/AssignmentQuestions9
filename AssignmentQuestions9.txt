@@ -1,0 +1,119 @@
+Q1.What is Spring Framework?
+
+Spring is a lightweight and popular open-source Java-based framework developed by Rod Johnson in 2003. 
+It is used to develop enterprise-level applications. It provides support to many other frameworks
+ such as Hibernate, Tapestry, EJB, JSF, Struts, etc, so it is also called a framework of frameworks.
+ It’s an application framework and IOC (Inversion of Control) container for the Java platform.
+ The spring contains several modules like IOC, AOP, DAO, Context, WEB MVC, etc.
+ 
+ 
+ Q2.What are the features of Spring Framework?
+ 
+Core technologies: dependency injection, events, resources, i18n, validation, data binding, type conversion, SpEL, AOP.
+
+Testing: mock objects, TestContext framework, Spring MVC Test, WebTestClient.
+
+Data Access: transactions, DAO support, JDBC, ORM, Marshalling XML.
+
+Spring MVC and Spring WebFlux web frameworks.
+
+Integration: remoting, JMS, JCA, JMX, email, tasks, scheduling, cache and observability.
+
+Languages: Kotlin, Groovy, dynamic languages.
+
+
+
+Q3.What is a Spring configuration file?
+
+A Spring configuration file is an XML file that contains the classes information.
+ It describes how those classes are configured as well as introduced to each other.
+ The XML configuration files, however, are verbose and cleaner.
+ 
+ 
+ Q4.What do you mean by IoC Container?
+ 
+ IoC container is a framework for implementing automated dependency injection. 
+ It contains object creation for the longer ways to use and injects dependencies within the class.
+ 
+ 
+ 
+ Q5.What do you understand by Dependency Injection?
+ 
+ Dependency Injection (DI) is a design pattern that removes the 
+ dependency from the programming code so that it can be easy to manage and test the application.
+ Dependency Injection makes our programming code loosely coupled.
+ 
+ 
+ 
+ Q6.Explain the difference between constructor and setter injection?
+ 
+Partial dependency: can be injected using setter injection but it is not possible by constructor.
+ Suppose there are 3 properties in a class, having 3 arg constructor and setters methods. 
+ In such case, if you want to pass information for only one property, it is possible by setter method only.
+ 
+Overriding: Setter injection overrides the constructor injection. 
+If we use both constructor and setter injection, IOC container will use the setter injection.
+
+
+Changes: We can easily change the value by setter injection.
+ It doesn't create a new bean instance always like constructor. 
+ So setter injection is flexible than constructor injection.
+ 
+ 
+ Q7.What are Spring Beans?
+ 
+ A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
+ These beans are created with the configuration metadata that you supply to the container.
+ For example, in the form of XML <bean/> definitions
+ 
+ 
+ 
+ Q8.What are the bean scopes available in Spring?
+ 
+1 singleton
+This scopes the bean definition to a single instance per Spring IoC container (default).
+
+2 prototype
+This scopes a single bean definition to have any number of object instances.
+
+3 request
+This scopes a bean definition to an HTTP request. Only valid in the context of a web-aware Spring ApplicationContext.
+
+4 session
+This scopes a bean definition to an HTTP session. Only valid in the context of a web-aware Spring ApplicationContext.
+
+5 global-session
+This scopes a bean definition to a global HTTP session. Only valid in the context of a web-aware Spring ApplicationContext.
+
+
+
+Q9.What is Autowiring and name the different modes of it?
+
+Autowiring feature of spring framework enables you to inject the object depende
+
+ It internally uses setter or constructor injection.
+
+Autowiring can't be used to inject primitive and string values. It works with reference only.
+
+different modes-->
+1)  no	   --> It is the default autowiring mode. It means no autowiring bydefault.
+2)	byName --> The byName mode injects the object dependency according to name of the bean.
+              In such case, property name and bean name must be same. It internally calls setter method.
+3)	byType --> The byType mode injects the object dependency according to type. 
+               So property name and bean name can be different. It internally calls setter method.
+4)	constructor--> The constructor mode injects the dependency by calling the constructor of the class. 
+                It calls the constructor having large number of parameters.
+5)	autodetect--> It is deprecated since Spring 3
+
+
+
+Q10.Explain Bean life cycle in Spring Bean Factory Container.
+
+Bean life cycle is managed by the spring container.
+ When we run the program then, first of all, the spring container gets started. 
+ After that, the container creates the instance of a bean as per the request, and then dependencies are injected.
+ And finally, the bean is destroyed when the spring container is closed. 
+ 
+ 
+ 
+
